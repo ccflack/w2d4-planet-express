@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Plante Express Report</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Pilot', 'Earned'],
+          
+          ['Fry',     35000],
+          
+          ['Lela',     131295],
+          
+          ['Amy',     15000],
+          
+          ['Bender',     355600],
+          
+        ]);
+
+        var options = {
+          title: 'Profit by Employee'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+      </script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Destination', 'Earned'],
+          
+          [' Earth',     35000],
+          
+          [' Moon',     44500],
+          
+          [' Mars',     15000],
+          
+          [' Uranus',     355600],
+          
+          [' Jupiter',     3451],
+          
+          [' Pluto',     2344],
+          
+          [' Saturn',     1000],
+          
+          [' Mercury',     80000],
+          
+        ]);
+
+        var options = {
+          title: 'Profit by Destination'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('chartbyplanet'));
+
+        chart.draw(data, options);
+      }
+      </script>
+  </head>
+  <body>
+    <h1>Total profit this week: 536895</h1>
+      <img src="http://i.giphy.com/xuDHhHcCR0rew.gif" />
+      <table border= "9">
+        <tr>
+          <th>
+            Destination
+          </th>
+          <th>
+            Shipment
+          </th>
+          <th>
+            Crates
+          </th>
+          <th>
+            Money
+          </th>
+          <th>
+            Pilot
+          </th>
+        </tr>
+        
+        <tr>
+          <td>
+             Earth
+          </td>
+          <td>
+            Hamburgers
+          </td>
+          <td>
+            150
+          </td>
+          <td>
+            30000
+          </td>
+          <td>
+            Fry
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+             Moon
+          </td>
+          <td>
+            Tacos
+          </td>
+          <td>
+            33
+          </td>
+          <td>
+            44500
+          </td>
+          <td>
+            Lela
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+             Earth
+          </td>
+          <td>
+            Movies
+          </td>
+          <td>
+            34
+          </td>
+          <td>
+            5000
+          </td>
+          <td>
+            Fry
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+             Mars
+          </td>
+          <td>
+            BBQ Sauce
+          </td>
+          <td>
+            999
+          </td>
+          <td>
+            15000
+          </td>
+          <td>
+            Amy
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+             Uranus
+          </td>
+          <td>
+            Whiskey
+          </td>
+          <td>
+            1000
+          </td>
+          <td>
+            345600
+          </td>
+          <td>
+            Bender
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+             Jupiter
+          </td>
+          <td>
+            Books
+          </td>
+          <td>
+            10
+          </td>
+          <td>
+            3451
+          </td>
+          <td>
+            Lela
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+             Pluto
+          </td>
+          <td>
+            Beer
+          </td>
+          <td>
+            100
+          </td>
+          <td>
+            2344
+          </td>
+          <td>
+            Lela
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+             Uranus
+          </td>
+          <td>
+            Pizza
+          </td>
+          <td>
+            66
+          </td>
+          <td>
+            10000
+          </td>
+          <td>
+            Bender
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+             Saturn
+          </td>
+          <td>
+            Pizza
+          </td>
+          <td>
+            26
+          </td>
+          <td>
+            1000
+          </td>
+          <td>
+            Lela
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+             Mercury
+          </td>
+          <td>
+            Pizza
+          </td>
+          <td>
+            36
+          </td>
+          <td>
+            80000
+          </td>
+          <td>
+            Lela
+          </td>
+        </tr>
+        
+      </table>
+        <h2>Individual Bonuses</h2>
+      <table border="9">
+        <tr>
+          <th>
+             Pilot
+          </th>
+          <th>
+             Trips
+          </th>
+          <th>
+             Bonus
+          </th>
+        </tr>
+        <tr>
+          
+          <td>
+            Fry
+          </td>
+          <td>
+            2
+          </td>
+          <td>
+            3500.0
+          </td>
+        </tr>
+        
+          <td>
+            Lela
+          </td>
+          <td>
+            5
+          </td>
+          <td>
+            13129.5
+          </td>
+        </tr>
+        
+          <td>
+            Amy
+          </td>
+          <td>
+            1
+          </td>
+          <td>
+            1500.0
+          </td>
+        </tr>
+        
+          <td>
+            Bender
+          </td>
+          <td>
+            2
+          </td>
+          <td>
+            35560.0
+          </td>
+        </tr>
+        
+      </table>
+      <div id="piechart" style="width: 900px; height: 500px;"></div>
+      <div id="chartbyplanet" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
