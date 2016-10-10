@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Planet Express Report</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
@@ -48,74 +49,82 @@
       </script>
   </head>
   <body>
-    <h1>Total profit this week: <%= profit %></h1>
-      <img src="http://i.giphy.com/xuDHhHcCR0rew.gif" />
-      <table border= "9">
-        <tr>
-          <th>
-            Destination
-          </th>
-          <th>
-            Shipment
-          </th>
-          <th>
-            Crates
-          </th>
-          <th>
-            Money
-          </th>
-          <th>
-            Pilot
-          </th>
-        </tr>
-        <% log.each do |trip| %>
-        <tr>
-          <td>
-            <%= trip.destination %>
-          </td>
-          <td>
-            <%= trip.shipment %>
-          </td>
-          <td>
-            <%= trip.crates %>
-          </td>
-          <td>
-            <%= trip.money %>
-          </td>
-          <td>
-            <%= trip.pilot %>
-          </td>
-        </tr>
-        <% end %>
-      </table>
-        <h2>Individual Bonuses</h2>
-      <table border="9">
-        <tr>
-          <th>
-             Pilot
-          </th>
-          <th>
-             Trips
-          </th>
-          <th>
-             Bonus
-          </th>
-        </tr>
-        <tr>
-          <% grouped.each do |pilot, trip| %>
-          <td>
-            <%= pilot %>
-          </td>
-          <td>
-            <%= trip.length %>
-          </td>
-          <td>
-            <%= trip.reduce(0) {|sum, value| sum + value.money }/10.0 %>
-          </td>
-        </tr>
-        <% end %>
-      </table>
-      <div id="piechart" style="width: 900px; height: 500px;"></div>
-      <div id="chartbyplanet" style="width: 900px; height: 500px;"></div>
+    <h1 class="text-center">Total profit this week: <%= profit %></h1>
+      <img src="http://i.giphy.com/xuDHhHcCR0rew.gif" class="img-responsive center-block" />
+      <div class="contianer">
+        <div id="piechart" style="width: 900px; height: 500px;" class="col-xs-offset-2"></div>
+        <div id="chartbyplanet" style="width: 900px; height: 500px;" class="col-xs-offset-2"></div>
+      </div>
+      <div class="contianer">
+        <div class="col-xs-offset-2 col-xs-8">
+          <table class="table">
+            <tr>
+              <th>
+                Destination
+              </th>
+              <th>
+                Shipment
+              </th>
+              <th>
+                Crates
+              </th>
+              <th>
+                Money
+              </th>
+              <th>
+                Pilot
+              </th>
+            </tr>
+            <% log.each do |trip| %>
+            <tr>
+              <td>
+                <%= trip.destination %>
+              </td>
+              <td>
+                <%= trip.shipment %>
+              </td>
+              <td>
+                <%= trip.crates %>
+              </td>
+              <td>
+                <%= trip.money %>
+              </td>
+              <td>
+                <%= trip.pilot %>
+              </td>
+            </tr>
+            <% end %>
+          </table>
+        </div>
+        <div class="col-xs-offset-2 col-xs-8">
+          <h2>Individual Bonuses</h2>
+          <table class="table" >
+            <tr>
+              <th>
+                 Pilot
+              </th>
+              <th>
+                 Trips
+              </th>
+              <th>
+                 Bonus
+              </th>
+            </tr>
+            <tr>
+              <% grouped.each do |pilot, trip| %>
+              <td>
+                <%= pilot %>
+              </td>
+              <td>
+                <%= trip.length %>
+              </td>
+              <td>
+                <%= trip.reduce(0) {|sum, value| sum + value.money }/10.0 %>
+              </td>
+            </tr>
+            <% end %>
+          </table>
+        </div>
+      </div>
   </body>
 </html>
